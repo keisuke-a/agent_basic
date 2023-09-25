@@ -4,6 +4,8 @@ from langchain.agents import AgentType, initialize_agent, load_tools
 from langchain.callbacks import StreamlitCallbackHandler
 import streamlit as st
 
+st_callback = StreamlitCallbackHandler(st.container())
+
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 llm = ChatOpenAI(temperature=0, streaming=True)
 tools = load_tools(["ddg-search"]) # DuckDuckGoの検索ツールをロードする
