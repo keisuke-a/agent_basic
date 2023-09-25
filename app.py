@@ -1,5 +1,7 @@
-from langchain.llms import OpenAI
+import streamlit
 import openai
+import langchain
+import duckduckgo-search
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import AgentType, initialize_agent, load_tools
 from langchain.callbacks import StreamlitCallbackHandler
