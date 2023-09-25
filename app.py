@@ -1,3 +1,4 @@
+import openai
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import AgentType, initialize_agent, load_tools
 from langchain.callbacks import StreamlitCallbackHandler
